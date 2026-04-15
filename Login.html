@@ -5,65 +5,74 @@
     <title>Login Page</title>
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+       body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial;
+  background: linear-gradient(to right, #74ebd5, #ACB6E5);
+}
 
-        .login-box {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            width: 300px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
+.login-box {
+  background: white;
+  padding: 30px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px gray;
+  text-align: center;
+}
 
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+.login-box h2 {
+  margin-bottom: 20px;
+}
 
-        input {
-            width: 100%;
-            padding: 10px;
-            margin: 8px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
 
-        button {
-            width: 100%;
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+.login-box button {
+  width: 100%;
+  padding: 10px;
+  background: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
-        button:hover {
-            background-color: #45a049;
-        }
+.login-box button:hover {
+  background: darkblue;
+  cursor:pointer;
+}
 
-        .links {
-            text-align: center;
-            margin-top: 10px;
-        }
+.links {
+  margin-top: 15px;
+}
 
-        .links a {
-            text-decoration: none;
-            color: #007BFF;
-            font-size: 14px;
-        }
+.links a {
+  text-decoration: none;
+  color: blue;
+  display: block;
+  margin: 5px 0;
+}
     </style>
 </head>
 
-<body>
-
+<body style ="display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin: 0;
+flex-direction: column;">
+<button onclick="window.location.href = 'index.html'">
+    Go to Home
+</button>
 <div class="login-box">
     <h2>Login</h2>
 
