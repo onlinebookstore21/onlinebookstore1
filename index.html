@@ -1,17 +1,215 @@
 <!DOCTYPE html>
-<html>
-    <head>
-    <title>
-        Home page
-    </title>
-    </head>
-    <body style ="text-align:center;font-family: Arial, Helvetica, sans-serif;">
-        <h1>Welcome to online book store</h1>
-        <button onclick="window.location.href='login.html'">
-            Login
-        </button>
-        <button onclick="window.location.href='Registration.html'">
-            Registration
-        </button>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libcore - Online Book Store</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        marquee {
+            background-color: #87CEEB;
+            color: #222;
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #333;
+            padding: 10px 20px;
+            color: white;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 45px;
+            height: 45px;
+            margin-right: 10px;
+        }
+
+        .logo h2 {
+            font-size: 28px;
+            color: #87CEEB;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .nav-links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            color: #87CEEB;
+        }
+
+        .search-box input {
+            padding: 6px;
+        }
+
+        .search-box button {
+            padding: 6px 10px;
+            background-color: #87CEEB;
+            border: none;
+            cursor: pointer;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .books-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .book {
+            position: relative;
+            border: 1px solid #ccc;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .price {
+            color: green;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .cart-btn {
+            padding: 8px 12px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .cart-btn:hover {
+            background-color: #218838;
+        }
+
+        /* Hide checkbox */
+        .book input {
+            display: none;
+        }
+
+        /* Heart button */
+        .heart {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        /* Default heart */
+        .heart::after {
+            content: "♡";
+            color: #999;
+        }
+
+        /* When clicked */
+        .book input:checked + .heart::after {
+            content: "❤️";
+            color: red;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <marquee>Welcome to Libcore - Your One Stop Online Book Store!</marquee>
+
+    <div class="navbar">
+        <div class="logo">
+            <img src="https://via.placeholder.com/45" alt="Logo">
+            <h2>Libcore</h2>
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search books...">
+            <button>Search</button>
+        </div>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Wishlist ❤️</a>
+            <a href="Login.html">Login/Register</a>
+            <a href="#">Cart</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2>Available Books</h2>
+
+        <div class="books-container">
+
+            <!-- Book 1 -->
+            <div class="book">
+                <input type="checkbox" id="wish1">
+                <label for="wish1" class="heart"></label>
+
+                <h3>The Alchemist</h3>
+                <p>Author: Paulo Coelho</p>
+                <p class="price">₹299</p>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+
+            <!-- Book 2 -->
+            <div class="book">
+                <input type="checkbox" id="wish2">
+                <label for="wish2" class="heart"></label>
+
+                <h3>Rich Dad Poor Dad</h3>
+                <p>Author: Robert Kiyosaki</p>
+                <p class="price">₹350</p>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+
+            <!-- Book 3 -->
+            <div class="book">
+                <input type="checkbox" id="wish3">
+                <label for="wish3" class="heart"></label>
+
+                <h3>Atomic Habits</h3>
+                <p>Author: James Clear</p>
+                <p class="price">₹450</p>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+
+            <!-- Book 4 -->
+            <div class="book">
+                <input type="checkbox" id="wish4">
+                <label for="wish4" class="heart"></label>
+
+                <h3>Think and Grow Rich</h3>
+                <p>Author: Napoleon Hill</p>
+                <p class="price">₹280</p>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+
+        </div>
+    </div>
+
+</body>
 </html>
